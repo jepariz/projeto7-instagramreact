@@ -1,4 +1,18 @@
+import React from "react";
+
+
 function Post(props) {
+
+  const [bookmark, setBookmark] = React.useState("bookmark-outline")
+
+  function salvarPost (){
+    if(bookmark === "bookmark-outline"){
+      setBookmark("bookmark")
+    } else{
+      setBookmark("bookmark-outline")
+    }
+  }
+
   return (
     <div class="post">
       <div class="topo">
@@ -23,7 +37,7 @@ function Post(props) {
             <ion-icon name="paper-plane-outline"></ion-icon>
           </div>
           <div>
-            <ion-icon name="bookmark-outline"></ion-icon>
+            <ion-icon onClick={salvarPost} name={bookmark}></ion-icon>
           </div>
         </div>
 
@@ -40,6 +54,7 @@ function Post(props) {
 }
 
 export default function Posts() {
+
   const posts = [
     {
       fotoUsuario: "assets/img/meowed.svg",
