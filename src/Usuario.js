@@ -1,10 +1,6 @@
 import React from "react";
 
 function User(props) {
-  console.log(props)
-
-  const estadoNome = props.estadoNome
-  const estadoImagem = props.estadoImagem
 
   return (
     <>
@@ -36,11 +32,10 @@ export default function Usuario() {
     const imagemPrompt = prompt("Digite o link da imagem")
     setImagem(imagemPrompt)
   }
- 
 
   return (
     <div class="usuario">
-        <User funcao1={trocarNome} funcao2={trocarImagem} imagem={imagem} nome={nome} estadoNome ={setNome} estadoImagem={setImagem}/>
+        <User funcao1={trocarNome} funcao2={trocarImagem} imagem={imagem} nome={nome}/>
     </div>
   );
 }
