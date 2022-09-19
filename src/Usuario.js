@@ -4,7 +4,7 @@ function User(props) {
 
   return (
     <>
-      <img onClick={props.funcao2} src={props.imagem} />
+      <img onClick={props.funcao2} src={props.imagem} alt={props.nome}/>
       <div class="texto">
         <strong>catanacomics</strong>
         <span>

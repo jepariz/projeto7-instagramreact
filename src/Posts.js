@@ -34,7 +34,7 @@ function Post(props) {
     <div class="post">
       <div class="topo">
         <div class="usuario">
-          <img src={props.fotoUsuario} />
+          <img src={props.fotoUsuario} alt={props.nome}/>
           meowed
         </div>
         <div class="acoes">
@@ -43,7 +43,7 @@ function Post(props) {
       </div>
 
       <div class="conteudo">
-        <img onClick={curtirPost} src={props.imagem} />
+        <img onClick={curtirPost} src={props.imagem} alt={props.alt} />
       </div>
 
       <div class="fundo">
@@ -59,7 +59,7 @@ function Post(props) {
         </div>
 
         <div class="curtidas">
-          <img src={props.curtida} />
+          <img src={props.curtida} alt={props.usuarioCurtiu} />
           <div class="texto">
             Curtido por <strong>{props.usuarioCurtiu}</strong> e{" "}
             <strong>outras {curtida} pessoas</strong>
@@ -75,7 +75,9 @@ export default function Posts() {
   const posts = [
     {
       fotoUsuario: "assets/img/meowed.svg",
+      nome: "meowed",
       imagem: "assets/img/gato-telefone.svg",
+      alt: "gatinho no telefone",
       curtida: "assets/img/respondeai.svg",
       usuarioCurtiu: "respondeai",
       numeroCurtidas: 101523,
@@ -83,7 +85,9 @@ export default function Posts() {
 
     {
       fotoUsuario: "assets/img/barked.svg",
+      nome: "barked",
       imagem: "assets/img/dog.svg",
+      alt: "cachorrinho dormindo",
       curtida: "assets/img/adorable_animals.svg",
       usuarioCurtiu: "adorable_animals",
       numeroCurtidas: 99159,
@@ -95,7 +99,9 @@ export default function Posts() {
       {posts.map((p) => (
         <Post
           fotoUsuario={p.fotoUsuario}
+          nome={p.nome}
           imagem={p.imagem}
+          alt={p.alt}
           curtida={p.curtida}
           usuarioCurtiu={p.usuarioCurtiu}
           numeroCurtidas={p.numeroCurtidas}
