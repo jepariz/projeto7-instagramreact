@@ -310,6 +310,9 @@ body {
   display: none !important;
 }
 
+.like{
+  color: #ED4956;
+}
 
 
 @media (max-width: 935px) {
