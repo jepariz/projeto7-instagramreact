@@ -99,7 +99,6 @@ export default function Posts() {
           curtida={p.curtida}
           usuarioCurtiu={p.usuarioCurtiu}
           numeroCurtidas={p.numeroCurtidas}
-          classe={".like"}
         />
       ))}
     </div>
